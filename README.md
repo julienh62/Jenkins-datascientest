@@ -1,3 +1,4 @@
+cat README.md
 
 #Pour vérifier que Java est installé sur notre système, exécutons la commande :
 java --version
@@ -20,8 +21,8 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 sudo apt-get update
 sudo apt-get install jenkins -y
 
-http://54.216.97.114:8080/login?from=%2Fenv-vars.html
-http://adresseip:8080/login?from=%2Fenv-vars.html pour se connecetr à jenkins
+http://54.216.97.114:8083/login?from=%2Fenv-vars.html
+http://adresseip:8083/login?from=%2Fenv-vars.html pour se connecetr à jenkins
 
 sudo systemctl status jenkins
 sudo systemctl start jenkins
@@ -94,7 +95,7 @@ Il est essentiel de créer une tâche de build Jenkins avant de lancer celui-ci.
 #Une liste de variable est disponible au sein de Jenkins en ouvrant l'url du serveur 
 #master sur un navigateur et en y ajoutant env-vars.html. L'url finale est donc sous ce format :
 
-#http://ip_de_votre_masterjenkins:8080/env-vars.html
+#http://ip_de_votre_masterjenkins:8083/env-vars.html
 
 
 Nous pouvons générer depuis notre serveur un fichier de configuration Kubernetes grâce à la commande suivante :
